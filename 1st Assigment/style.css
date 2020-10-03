@@ -1,0 +1,88 @@
+/*IDs*/
+h3 {
+  line-height:1;
+}
+h4 {
+  line-height:1;
+  font-weight: 50;
+}
+h5 {
+  line-height:1;
+    font-weight: lighter;
+}
+
+br {
+  line-height: 1;
+}
+
+p {
+  font-size: 10;
+}
+
+
+#col-1 {
+  position: relative;
+  width: 25%;
+  float: left;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 10px;
+
+
+}
+
+#col-2 {
+  position: relative;
+  width: 70%;
+  float: left;
+  height: 100%;
+  background-color: #ffffff;
+
+}
+
+#col-3 {
+  position: relative;
+  width: 50%;
+  float: left;
+  background-color: #ffffff;
+
+}
+
+#blockA {
+  background-color:#0080ff;
+  font-weight: bold;
+  text-transform:uppercase;
+  color: #ffffff;
+}
+
+#alone {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+#image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  height: 160px;
+  padding: 20px;
+
+}
+
+/*Classes*/
+
+.horizdiv {
+  border-bottom: solid;
+  border-color: 000000;
+
+}
+
+.textcenter {
+  text-align: center;
+
+}
+
+.justify {
+  text-align: justify;
+}
