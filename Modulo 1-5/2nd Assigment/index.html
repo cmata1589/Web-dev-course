@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <title>Landing Page 2nd Assigment</title>
+  
   </head>
   <body>
 
@@ -12,10 +13,11 @@
     </header>
 
     <div class="center">
+      <p>Enter your personal info in the fields below, then press the "Submit" button to submit the form.</p>
 
-      <form>
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
+      <form id="myform" onsubmit="return validateForm()">
+        <label for="fname" >First name:</label><br>
+        <input type="text" maxlength="20" id="fname" name="fname" required><br>
         <label for="lname">Last name:</label><br>
         <input type="text" id="lname" name="lname"><br>
         <label for="email">Email:</label><br>
@@ -30,5 +32,8 @@
         <input type="submit" value="Submit">
       </form>
     </div>
+<script src="script.js">    </script>
   </body>
+
+
 </html>
