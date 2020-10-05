@@ -1,20 +1,283 @@
 
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#141e30, #243b55);
+  color: white;
+}
 
-header {
+nav {
+  position: fixed;
+  background: #000;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: .2em 2em;
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0;
+  padding: .2em .7em;
+}
+
+nav a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  font-family: Ubuntu;
+  font-size: 1.15em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  transition: .25s ease-in-out;
+}
+
+nav a:hover {
+  color: rgb(220, 120, 0);
+}
+
+.nav-bg {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgb(50, 50, 50);
+  transition: .45s ease-in-out;
+}
+
+.bg-hidden {
+  top: -100%;
+  opacity: 0;
+}
+
+.bg-visible {
+  top: 0;
+  opacity: 1;
+}
+
+h1 {
+  text-align: center;
+  font-family: Ubuntu;
+  letter-spacing: 1px;
+}
+
+.hero {
   position: relative;
   width: 100%;
-  float: left;
-  height: 30px;
-  background-color: gray;
-  padding: 20px;
+  height: 500px;
+  background: rgb(50, 50, 50);
+  background: url(https://doninmass.files.wordpress.com/2013/04/walking-in-rain-painting-wallpaper-hd.jpg) no-repeat 50% 50% fixed;
+  background-size: 130%;
+  overflow: hidden;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  padding: .3em;
+  font-size: 3em;
+  font-weight: lighter;
+}
+
+.content-wrapper {
+  width: 20%;
+  height: 1000px;
+  padding: 1em 10%;
+}
+
+.content-wrapper h1 {
+  margin: 0;
+  color: rgb(220, 120, 0);
+}
+
+.content-wrapper p {
+  font-family: "Open Sans";
+  text-indent: 1.5em;
+}
+
+.login-box textarea {
+  background: rgba(0,0,0,.5);
+  padding: 10px;
+  color: #fff;
+  width: 400px;
+}
+
+.login-box select {
+  background: rgba(0,0,0,.5);
+  padding: 10px;
+  color: #fff;
+  width: 450px;
+}
+
+.login-box {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  padding: 50px;
+
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 30px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
   text-align: center;
 }
 
-.center {
-  float: left;
-  margin-left: auto;
-  margin-right: auto;
-  width: 120px;
-  height: 160px;
-  padding: 20px;
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
 }

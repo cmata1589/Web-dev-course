@@ -4,35 +4,61 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <title>Landing Page 2nd Assigment</title>
-  
   </head>
-  <body>
 
-    <header style="background-color:blue; color: white; ">
-      WELCOME TO OUR LANDING PAGE
+  <body>
+    <header>
+      <nav>
+        <div class="nav-bg"></div>
+        <ul>
+          <li><a href="">About us</a></li>
+          <li><a href="">Our History</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero"><h1>Let us do our job</h1></div>
     </header>
 
-    <div class="center">
-      <p>Enter your personal info in the fields below, then press the "Submit" button to submit the form.</p>
 
-      <form id="myform" onsubmit="return validateForm()">
-        <label for="fname" >First name:</label><br>
-        <input type="text" maxlength="20" id="fname" name="fname" required><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender">
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Other">Other</option>
-        </select><br>
-        <textarea name="message" rows="10" cols="30">Write your message here.</textarea>
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-<script src="script.js">    </script>
+      <div class="login-box">
+        <h2>Enter your personal info in the fields below, then press the "Submit" button to submit the form.</h2>
+        <form id="myform" onsubmit="return validateForm()">
+          <div class="user-box">
+            <label for="fname" >First name:</label><br>
+            <input type="text" minlength="3" maxlength="20" id="fname" name="fname" required><br>
+          </div>
+          <div class="user-box">
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" required><br>
+          </div>
+            <div class="user-box">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+          </div>
+
+            <div class="flex-container">
+              <label for="gender">Gender:<br></label><br>
+              <select id="gender" name="gender">
+                <option value=" ">  Select </option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div><br>
+          <div class="user-box">
+            <textarea name="message" rows="10" cols="30">Write your message here.</textarea><br>
+            <a href="#" style="margin: auto;">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Submit
+            </a>
+          </div>
+      </div>
+    <script src="script.js">    </script>
+
   </body>
 
 
