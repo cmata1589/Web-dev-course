@@ -113,7 +113,7 @@ h1 {
   background: rgba(0,0,0,.5);
   padding: 10px;
   color: #fff;
-  width: 400px;
+  width: auto;
 }
 
 .login-box select {
@@ -125,9 +125,9 @@ h1 {
 
 .login-box {
   position: relative;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  width: 600px;
+  width: 700px;
   padding: 50px;
 
   transform: translate(-50%, -50%);
@@ -280,4 +280,12 @@ h1 {
   50%,100% {
     bottom: 100%;
   }
+}
+
+.grid-videos {
+  display: grid;
+  grid-gap: 10px;
+  grid-template: 150px / auto auto;
+  justify-content: center;
+
 }
